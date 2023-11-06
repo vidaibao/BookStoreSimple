@@ -1,4 +1,7 @@
-﻿namespace BookStore_Vidaibao
+﻿using Repositories.Entities;
+using Services;
+
+namespace BookStore_Vidaibao
 {
     public partial class LoginForm : Form
     {
@@ -10,12 +13,13 @@
         private void btnLogin_Click(object sender, EventArgs e)
         {
             //MessageBox.Show(GetConnectionString());
-            /*
-            string email = txtEmail.Text; //TODO:kiểm tra rỗng!!!
+            
+            string email = txtEmail.Text; //TODO: kiểm tra rỗng!!!
             string password = txtPassword.Text; //TODO: kiểm tra rỗng
+            
             BookManagementMemberService se = new BookManagementMemberService(); ;
 
-            BookManagementMember account = se.CheckLogin(email, password);
+            BookManagementMember? account = se.CheckLogin(email, password);
             if (account == null)
             {
                 MessageBox.Show("Login failed. Please check your credentials",
@@ -37,7 +41,7 @@
             BookManagerForm bookMgt = new BookManagerForm();
             bookMgt.Show(); //show form CRUD
             this.Hide();  //ẩn form login đi
-            */
+            
         }
 
 

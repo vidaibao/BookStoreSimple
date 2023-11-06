@@ -8,6 +8,8 @@ namespace Repositories;
 
 public partial class BookManagement2023DbContext : DbContext
 {
+    // waitting 4 new Book(), new Category(), new .... CRUD
+
     public BookManagement2023DbContext()
     {
     }
@@ -17,6 +19,7 @@ public partial class BookManagement2023DbContext : DbContext
     {
     }
 
+    // 3 tables
     public virtual DbSet<Book> Books { get; set; }
 
     public virtual DbSet<BookCategory> BookCategories { get; set; }
